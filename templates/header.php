@@ -1,5 +1,13 @@
 <?php
 //include_once "config/url.php";
+include_once "config/connection.php";
+include_once "config/process.php";
+
+//msg de sessão
+if (isset($_SESSION['msg'])) {
+    $printMsg = $_SESSION['msg'];
+    $_SESSION['smg'] = '';
+}
 
 ?>
 
@@ -22,14 +30,17 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <a href="/" class="navbar-brand">
-                <img src="/img/agenda.svg" alt="">
-            </a>
-            <div>
-                <div class="navbar-nav">
-                    <a href="/" class="nav-link" id="home-link">Agenda</a>
-                    <a href="create.php" class="nav-link" id="home-link">Adicionar Contato</a>
+        <nav class="navbar navbar-expand-lg bg-gray">
+            <div class="container">
+
+                <a href="/" class="navbar-brand">
+                    <img src="/img/agenda.svg" alt="">
+                </a>
+                <div>
+                    <div class="navbar-nav">
+                        <a href="/" class="nav-link" id="home-link">Agenda</a>
+                        <a href="create.php" class="nav-link" id="home-link">Adicionar Contato</a>
+                    </div>
                 </div>
             </div>
         </nav>
