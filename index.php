@@ -27,8 +27,12 @@
                 <td scope="row"><?=$contact['phone']?></td>
                 <td class="actions">
                     <a href="show.php?id=<?=$contact['id']?>"><i class="fas fa-eye check-icon"></i></a>
-                    <a href="#edit"><i class="far fa-edit edit-icon"></i></a>
-                    <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                    <a href="edit.php?id=<?=$contact['id']?>"><i class="far fa-edit edit-icon"></i></a>
+                    <form class="delete-form" action="/config/process.php" method="POST">
+                        <input type="hidden" name="type" value="delete">
+                        <input type="hidden" name="id" value="<?=$contact['id']?>">
+                        <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                    </form>
                 </td>
             </tr>
             <?php endforeach?>

@@ -6,7 +6,7 @@ include_once "config/process.php";
 //msg de sessão
 if (isset($_SESSION['msg'])) {
     $printMsg = $_SESSION['msg'];
-    $_SESSION['smg'] = '';
+    $_SESSION['msg'] = '';
 }
 
 ?>
@@ -39,7 +39,7 @@ if (isset($_SESSION['msg'])) {
                 <div>
                     <div class="navbar-nav">
                         <a href="/" class="nav-link" id="home-link">Agenda</a>
-                        <a href="create.php" class="nav-link" id="home-link">Adicionar Contato</a>
+                        <a href="create.php" class="nav-link">Adicionar Contato</a>
                     </div>
                 </div>
             </div>
